@@ -1,4 +1,117 @@
 extends _layouts/base
 
+include ./_modules/slider/slider
+
 block content
     main.home
+        section.home__hero
+            img(src="/images/home/hero.jpg")
+   
+        section.home__about
+            .container
+                .row
+                    .col-24.col-md-12
+                        .home__about__image
+                            img(src="/images/home/about.jpg")
+                    .col-24.col-md-12
+                        .home__about__content
+                            h3.home__about__title Sobre Nosotros
+                            p.home__about__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .col-24
+                        .-separator
+  
+        section.home__habitaciones
+            .container
+                .row
+                    .col-24
+                        h2.home__habitaciones__title habitaciones
+                    .col-24.col-md-8
+                        .home__habitaciones__container
+                            .home__habitaciones__image
+                                img(src="/images/home/habitacion-1.jpg")
+                            .home__habitaciones__content
+                                h3.home__habitaciones__content-title habitacion 1
+                                p.home__habitaciones__content-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.home__habitaciones__button(href="/contacto") contactar
+                                    i.fa.fa-play
+                    .col-24.col-md-8
+                        .home__habitaciones__container
+                            .home__habitaciones__image
+                                img(src="/images/home/habitacion-2.jpg")
+                            .home__habitaciones__content
+                                h3.home__habitaciones__content-title habitacion 1
+                                p.home__habitaciones__content-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.home__habitaciones__button(href="/contacto") contactar
+                                    i.fa.fa-play
+                    .col-24.col-md-8
+                        .home__habitaciones__container
+                            .home__habitaciones__image
+                                img(src="/images/home/habitacion-3.jpg")
+                            .home__habitaciones__content
+                                h3.home__habitaciones__content-title habitacion 1
+                                p.home__habitaciones__content-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                a.home__habitaciones__button(href="/contacto") contactar
+                                    i.fa.fa-play
+
+        section.home__servicios
+            h2.home__servicios__title servicios
+            .home__servicios__container
+                .container
+                    .row
+                        .col-24
+                            .home__servicios__wrapper
+                                .home__servicios__icon
+                                    img(src="/images/home/icon-wifi.png")
+                                .home__servicios__icon
+                                    img(src="/images/home/icon-recepcion.png")
+                                .home__servicios__icon
+                                    img(src="/images/home/icon-phone.png")
+                                .home__servicios__icon
+                                    img(src="/images/home/icon-bed.png")
+                                .home__servicios__icon
+                                    img(src="/images/home/icon-coffee.png")
+
+        section.home__galeria
+            .container
+                .row
+                    .col-24
+                        h2.home__galeria__title galería
+                    .col-24
+                        +slider('home__galeria__slider')
+                            .home__galeria__slide
+                                img(src="/images/home/slider-1.jpg")
+                            .home__galeria__slide
+                                img(src="/images/home/slider-2.jpg")
+                            .home__galeria__slide
+                                img(src="/images/home/slider-3.jpg")
+                            .home__galeria__slide
+                                img(src="/images/home/slider-4.jpg")
+                            .home__galeria__slide
+                                img(src="/images/home/slider-5.jpg")
+                            .home__galeria__slide
+                                img(src="/images/home/slider-6.jpg")
+                    .col-24
+                        .-separator
+        
+        section.home__comentarios
+            .container
+                .row
+                    .col-24
+                        h2.home__comentarios__title comentarios
+                        .home__comentarios__wrapper
+                            .home__comentarios__avatar
+                                p J
+                            .home__comentarios__content
+                                p.home__comentarios__comment
+                                    i.fa.fa-quote-left&nbsp;
+                                    |El hotel tiene muy buena ubicación, la habitación es ámplia y muy limpia, la calefacción funciona perfecto, el personal es muy amable y atento, la verdad superó mis expectativas.&nbsp;
+                                    i.fa.fa-quote-right
+                                p.home__comentarios__name Julio
+                                .home__comentarios__country 
+                                    p Colombia
+                                    img(src="/images/home/icon-flag.png")
+                                a.home__comentarios__button(href="/comentarios") más comentarios
+                                    i.fa.fa-play
+
+
+

@@ -6,10 +6,24 @@ var Slider = function() {
     if (slider) {
         slider.each(function(){
             $(this).slick({
-                dots: true,
-                fade: true,
-                arrows:  false,
-                autoplay: true
+                dots: false,
+                infinite: true,
+                // speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                // centerMode: true,
+                autoplay: false,
+                responsive: [
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+
             });
         });
     }

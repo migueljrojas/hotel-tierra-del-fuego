@@ -1,3 +1,147 @@
 .footer {
-    
+    &__top-container {
+        background: $blue;
+        padding: 20px 0;
+    }
+
+    &__wrapper {
+        height: 100%;
+        margin-bottom: 40px;
+        
+        @include mq(md) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 24px;
+        color: $white;
+        margin-bottom: 10px;
+    }
+
+    &__phone {
+        color: $white;
+        font-size: 28px;
+        margin: 0;
+    }
+
+    &__email {
+        display: block;
+        color: $blueGreen;
+        font-size: 28px;
+        font-weight: 500;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    &__address {
+        margin: 0;
+        color: $white;
+        font-size: 20px;
+    }
+
+    &__group {
+        @include mq(md) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 20px;
+
+        @include mq(md) {
+            margin-bottom: 0;
+        }
+
+        i {
+            color: $white;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        color: $white;
+    }
+
+    &__map {
+        @include mq(md) {
+            margin-left: 20px;
+            width: 50%;
+        }
+    }
+
+    &__bottom-container {
+        padding: 40px 0;
+    }
+
+    &__nav-group {
+        @include mq(md) {
+            height: 5vh;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @include mq(md) {
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 60%;
+            height: auto;
+
+            @include mq(md) {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+
+    &__list {
+        @include mq(md) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+
+    &__item {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @include mq(md) {
+                margin-bottom: 0;
+            }
+        }
+
+        @include mq(md) {
+            margin-left: 60px;
+        }
+        
+        a {
+            color: $darkestGray;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+    }
 }

@@ -1,5 +1,13 @@
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+    background: $white;
+
+    @include mq(md) {
+        position: relative;
+    }
 
     $h: &;
 
@@ -12,6 +20,14 @@
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
+        height: 10vh;
+        margin: 10px 0;
+                
+        @include mq(md) {
+            height: 20vh;
+            margin: 0;
+        }
     }
 
     &__group {
@@ -24,17 +40,35 @@
         display: block;
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+        height: 70%;
+        left: 0;
+        z-index: 3000;
+
+        @include mq(md) {
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            height: 50%;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+        }
     }
 
     &__weather {
         margin-left: auto;
         width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__city {
-
+        text-transform: capitalize;
+        font-size: 14px;
+        margin-right: 10px;
     }
 
     &__temperature {
@@ -52,6 +86,9 @@
         left: 0;
         right: 0;
         bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: $white;
         transform: translateX(-100%);
         z-index: 1000;
@@ -62,6 +99,7 @@
             height: auto;
             background: transparent;
             transform: translateX(0);
+            padding: 20px 0;
         }
     }
 
@@ -74,11 +112,21 @@
     }
 
     &__item {
-        margin: 0 30px;
+        margin: 20px 0;
+
+        @include mq(md) {
+            margin: 0 30px;
+        }
         
         a {
             text-decoration: none;
             color: $darkGray;
+            text-transform: capitalize;
+            font-size: 20px;
+
+            @include mq(md) {
+                font-size: 16px;
+            }
 
             &:hover {
                 color: $blue;
@@ -137,6 +185,11 @@
         #{$h}__nav {
             transform: translateX(0);
             opacity: 1;
+
+        }
+
+        .header__logo {
+            z-index: 3000;
         }
     }
 }
