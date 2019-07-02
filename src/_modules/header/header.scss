@@ -2,6 +2,46 @@
 
     $h: &;
 
+    &__container {
+        position: absolute;
+        width: 100%;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    &__logo {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    &__weather {
+        margin-left: auto;
+        width: auto;
+    }
+
+    &__city {
+
+    }
+
+    &__temperature {
+
+    }
+
+    &__nav {
+        opacity: 0;
+        width: 100%;
+
+        @include mq(md) {
+            opacity: 1;
+        }
+    }
+
     &__hamburguer {
         cursor: pointer;
         width: 25px;
