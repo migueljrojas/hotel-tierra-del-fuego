@@ -1,0 +1,38 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.contacto
+        section.contacto__hero
+            img(src="/images/home/hero.jpg")
+        
+        section.contacto__form
+            form.container
+                .row
+                    .col-24
+                        h2.contacto__form__title contacto
+                    .col-24.col-md-12
+                        .contacto__form__group
+                            label.contacto__form__label Nombre
+                            input.contacto__form__input
+                    .col-24.col-md-12
+                        .contacto__form__group
+                            label.contacto__form__label Apellido
+                            input.contacto__form__input
+                    .col-24.col-md-12
+                        .contacto__form__group
+                            label.contacto__form__label Número Telefónico
+                            input.contacto__form__input
+                    .col-24.col-md-12
+                        .contacto__form__group
+                            label.contacto__form__label Correo
+                            input.contacto__form__input
+                    .col-24
+                        .contacto__form__group
+                            label.contacto__form__label.contacto__form__label--textarea Mensaje
+                            input.contacto__form__input.contacto__form__input--textarea
+                    .col-24
+                        button.contacto__form__button enviar

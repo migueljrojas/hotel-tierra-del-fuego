@@ -211,6 +211,10 @@
             }
         }
 
+        .slick-dots {
+            display: none !important;
+        }
+
         &__slide {
             height: 0;
             overflow: hidden;

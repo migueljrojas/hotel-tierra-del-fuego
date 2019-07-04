@@ -1,0 +1,129 @@
+.habitaciones {
+    overflow: hidden;
+    padding-top: calc(10vh + 20px);
+
+    @include mq(md) {
+        padding-top: 0;
+    }
+
+    &__hero {
+        position: relative;
+        height: 60vh;
+        border-bottom: 15px solid $blueGreen;
+        overflow: hidden;
+        
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);    
+        }
+    }
+
+    &__content {
+        padding: 80px 0;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: $lightGray;
+            top: 12%;
+
+            @include mq(md) {
+                top: 25%;
+            }
+        }
+    
+        &__title {
+            color: $blue;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 80px;
+        }
+
+        &__group {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        &__container {
+            width: 100%;
+            margin-bottom: 40px;
+            
+            @include mq(md) {
+                width: 35%;
+            }
+        }
+
+        &__image {
+            height: 0;
+            padding-bottom: 65%;
+            overflow: hidden;
+            position: relative;
+    
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);                
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+    
+        &__wrapper {
+            padding: 20px 10px 40px 10px;
+            background: $white;
+        }
+    
+        &__wrapper-title {
+            text-align: center;
+            color: $blueGreen;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+    
+        &__wrapper-text  {
+            color: $darkGray;
+            margin: 0;
+            margin-bottom: 40px;
+        }
+    
+        &__button {
+            display: block;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            text-align: center;
+            color: $blueGreen;
+            
+            i {
+                margin-left: 10px;
+                color: $blueGreen;
+                font-size: 14px;
+            }
+            
+            
+            &--detalles {
+                padding-bottom: 5px;
+                color: $blue;
+                border-bottom: 1px solid $darkGray;
+                margin-bottom: 5px;
+
+                i {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

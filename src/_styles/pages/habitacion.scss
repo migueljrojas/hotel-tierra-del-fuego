@@ -1,0 +1,157 @@
+.habitacion {
+    overflow: hidden;
+    padding-top: calc(10vh + 20px);
+
+    @include mq(md) {
+        padding-top: 0;
+    }
+
+    &__hero {
+        position: relative;
+        height: 60vh;
+        border-bottom: 15px solid $blueGreen;
+        overflow: hidden;
+        
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);    
+        }
+    }    
+ 
+    &__content {
+        padding: 80px 0 40px 0;
+        position: relative;
+
+        &__container {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px dashed $darkestGray;
+        }
+
+        &__title {
+            color: $blue;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        &__button {
+            display: block;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: $blueGreen;
+            border-bottom: 1px solid $darkGray;
+            padding-bottom: 5px;
+            width: 50%;
+
+            @include mq(md) {
+                width: 15%;
+            }
+
+            i {
+                margin-left: 10px;
+                color: $blueGreen;
+                font-size: 14px;
+            }
+        }
+
+        &__subtitle {
+            color: $blue;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 40px;
+        }
+
+        &__list {
+            list-style: disc;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__item-container {
+            margin-bottom: 20px;
+            
+            @include mq(md) {
+                width: 50%;
+            }
+            
+            &:nth-child(odd) {
+                padding-left: 20px;
+                @include mq(md) {
+                    padding-left: 150px;
+                    padding-right: 100px
+                }
+            }
+
+            &:nth-child(even) {
+                padding-left: 20px;
+
+                @include mq(md) {
+                    padding-right: 150px;
+                    padding-left: 100px
+                }
+            }
+        }
+    }
+
+    &__galeria {
+        padding-bottom: 80px;
+        
+        &__title {
+            color: $blue;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 40px;
+        }
+
+        .slick-dots {
+            bottom: -40px;
+            width: 100%;
+
+            li {
+                button {
+                    
+                    &:before {
+                        color: $darkGray;
+                        font-size: 12px;
+
+                    }
+                }
+            }
+        }
+
+        .slick-slide {
+            margin: 0 15px;
+        }
+
+        .slick-arrow {
+            display: none !important;
+        }
+
+        &__slide {
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 56.5%;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);                
+                // max-height: 100%;
+                // max-width: 100%;
+            }
+        }
+    }
+}

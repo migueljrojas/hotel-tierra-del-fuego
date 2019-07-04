@@ -1,0 +1,55 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.habitacion
+        section.habitacion__hero
+            img(src="/images/home/hero.jpg")
+
+        section.habitacion__content
+            .container
+                .row
+                    .col-24
+                        .habitacion__content__container
+                            h2.habitacion__content__title habitación 1
+                            a.habitacion__content__button(href="/contacto") contactar
+                                i.fa.fa-play
+                    .col-24
+                        .habitacion__content__container
+                            h2.habitacion__content__subtitle especificaciones de habitación
+                            ul.habitacion__content__list
+                                .habitacion__content__item-container
+                                    li.habitacion__content__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                .habitacion__content__item-container
+                                    li.habitacion__content__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                                .habitacion__content__item-container
+                                    li.habitacion__content__item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                .habitacion__content__item-container
+                                    li.habitacion__content__item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                .habitacion__content__item-container
+                                    li.habitacion__content__item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                .habitacion__content__item-container
+                                    li.habitacion__content__item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        section.habitacion__galeria
+            .container
+                .row
+                    .col-24
+                        h2.habitacion__galeria__title galeria
+                        +slider('habitacion__galeria__slider', 'multi')
+                            .habitacion__galeria__slide
+                                img(src="/images/habitaciones/habitacion-1.jpg")
+                            .habitacion__galeria__slide
+                                img(src="/images/habitaciones/habitacion-2.jpg")
+                            .habitacion__galeria__slide
+                                img(src="/images/habitaciones/habitacion-3.jpg")
+                            .habitacion__galeria__slide
+                                img(src="/images/habitaciones/habitacion-1.jpg")
+                            .habitacion__galeria__slide
+                                img(src="/images/habitaciones/habitacion-2.jpg")
+                            .habitacion__galeria__slide
+                                img(src="/images/habitaciones/habitacion-3.jpg")

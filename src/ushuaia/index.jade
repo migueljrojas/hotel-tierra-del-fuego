@@ -1,0 +1,245 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+block content
+    main.ushuaia
+        section.ushuaia__hero
+            +slider('ushuaia__hero__slider', 'normal')
+                .ushuaia__hero__slide
+                    img(src="/images/home/hero.jpg")
+                .ushuaia__hero__slide
+                    img(src="/images/home/hero.jpg")
+                .ushuaia__hero__slide
+                    img(src="/images/home/hero.jpg")
+
+        section.ushuaia__datos-de-interes
+            .container
+                .row
+                    .col-24
+                        .ushuaia__datos-de-interes__container
+                            h2.ushuaia__datos-de-interes__title ushuaia
+                            h2.ushuaia__datos-de-interes__subtitle datos de interés
+
+                    .col-24
+                        ul.ushuaia__datos-de-interes__list
+                            .ushuaia__datos-de-interes__item-container
+                                li.ushuaia__datos-de-interes__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            .ushuaia__datos-de-interes__item-container
+                                li.ushuaia__datos-de-interes__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            .ushuaia__datos-de-interes__item-container
+                                li.ushuaia__datos-de-interes__item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            .ushuaia__datos-de-interes__item-container
+                                li.ushuaia__datos-de-interes__item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            .ushuaia__datos-de-interes__item-container
+                                li.ushuaia__datos-de-interes__item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            .ushuaia__datos-de-interes__item-container
+                                li.ushuaia__datos-de-interes__item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+        section.ushuaia__actividades
+            .container
+                .row
+                    .col-24
+                        .ushuaia__actividades__container
+                            h2.ushuaia__actividades__title actividades
+                    .col-24.col-md-6
+                        .ushuaia__actividades__actividad-container
+                            .ushuaia__actividades__actividad-image
+                                img(src="/images/ushuaia/actividad-1.jpg")
+                            .ushuaia__actividades__actividad-content
+                                .ushuaia__actividades__actividad-title Museo del Fin del Mundo
+                                .ushuaia__actividades__stars-container
+                                    i.fa.fa-star.-yellow
+                                    i.fa.fa-star
+                                    i.fa.fa-star
+                                    i.fa.fa-star
+                                    i.fa.fa-star
+                    .col-24.col-md-6
+                        .ushuaia__actividades__actividad-container
+                            .ushuaia__actividades__actividad-image
+                                img(src="/images/ushuaia/actividad-2.jpg")
+                            .ushuaia__actividades__actividad-content
+                                .ushuaia__actividades__actividad-title Museo Marítimo y del Presidio de Ushuaia
+                                .ushuaia__actividades__stars-container
+                                    i.fa.fa-star.-yellow
+                                    i.fa.fa-star.-yellow
+                                    i.fa.fa-star.-yellow
+                                    i.fa.fa-star.-yellow
+                                    i.fa.fa-star
+                    .col-24.col-md-6
+                        .ushuaia__actividades__actividad-container
+                            .ushuaia__actividades__actividad-image
+                                img(src="/images/ushuaia/actividad-3.jpg")
+                            .ushuaia__actividades__actividad-content
+                                .ushuaia__actividades__actividad-title Laguna Esmeralda
+                                .ushuaia__actividades__stars-container
+                                    i.fa.fa-star.-yellow
+                                    i.fa.fa-star
+                                    i.fa.fa-star
+                                    i.fa.fa-star
+                                    i.fa.fa-star
+                    .col-24.col-md-6
+                        .ushuaia__actividades__actividad-container
+                            .ushuaia__actividades__actividad-image
+                                img(src="/images/ushuaia/actividad-4.jpg")
+                            .ushuaia__actividades__actividad-content
+                                .ushuaia__actividades__actividad-title Galeía Temática - Historia Fueguina
+                                .ushuaia__actividades__stars-container
+                                    i.fa.fa-star.-yellow
+                                    i.fa.fa-star
+                                    i.fa.fa-star
+                                    i.fa.fa-star
+                                    i.fa.fa-star                                    
+
+        section.ushuaia__season
+            .container
+                .row
+                    .col-24
+                        .ushuaia__season__container
+                            h2.ushuaia__season__title La mejor época para ir
+
+                        .ushuaia__season__table
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    h3 popularidad
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    h3 Máx/min
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    h3 Lluvias
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p junio
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 4° / -1°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 33%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p julio
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male
+                                    i.fa.fa-male
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 4° / -1°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 28%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p agosto
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 6° / -1°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 33%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p semptiembre
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 8° / 1°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 26%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p octubre
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male
+                                    i.fa.fa-male
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 10° / 2°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 18%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p noviembre
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 12° / 3°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 23%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p diciembre
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 13° / 5°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 26%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p enero
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 14° / 5°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 22%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p febrero
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male
+                                    i.fa.fa-male
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 14° / 5°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 24%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p marzo
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male
+                                    i.fa.fa-male
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 12° / 4°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 25%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p abril
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 9° / 2°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 26%
+                            .ushuaia__season__table-column.ushuaia__season__table-row
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--month
+                                    p mayo
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--popularity
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                    i.fa.fa-male.-dark
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--temperature
+                                    span 7° / 1°
+                                .ushuaia__season__table-cell.ushuaia__season__table-cell--rain
+                                    span 25%

@@ -1,0 +1,71 @@
+.servicios {
+    overflow: hidden;
+    padding-top: calc(10vh + 20px);
+
+    @include mq(md) {
+        padding-top: 0;
+    }
+
+    &__hero {
+        position: relative;
+        height: 60vh;
+        border-bottom: 15px solid $blueGreen;
+        overflow: hidden;
+        
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);    
+        }
+    }
+
+    &__content {
+        padding: 80px 0;
+    
+        &__title {
+            color: $blue;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 80px;
+        }
+
+        &__container {
+            margin-bottom: 40px;
+            
+            @include mq(md) {
+                padding: 0 40px;
+                margin-bottom: 80px;
+            }
+        }
+
+        &__icon {
+            width: 180px;
+            height: 180px;
+            margin-left: auto;
+            margin-right: auto;
+
+            img {
+                filter: brightness(70%)
+            }
+        }
+
+        &__container-title {
+            color: $blue;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &__container-text {
+            text-align: center;
+            font-size: 14px;
+
+            @include mq(md) {
+                font-size: 16px;
+            }
+        }
+    }
+}
